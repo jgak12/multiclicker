@@ -6,7 +6,7 @@ from pynput import mouse, keyboard
 # Global variable to store the click coordinate
 coordinate = None
 clickDelay = 3
-num_clicks = 10
+num_clicks = 48
 pause_duration = 1
 
 # Global flag to indicate when to stop the clicking loop
