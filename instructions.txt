@@ -1,0 +1,11 @@
+Clone repository from Github (copy the folder and put it on your desktop)
+open it in vscode or navigate to the folder in your terminal
+
+Run these commands one at a time in order: 
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+when ready to run the program, make the terminal window small and run: python3 multiclick.py
+then click where you want the clicks to happen and wait
+Hit the x key at any time to stop it
