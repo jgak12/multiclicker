@@ -7,7 +7,7 @@ from pynput import mouse, keyboard
 coordinate = None
 clickDelay = 3
 num_clicks = 48
-pause_duration = 2
+pause_duration = 1
 
 # Global flag to indicate when to stop the clicking loop
 stop_program = False
@@ -52,11 +52,23 @@ def keyboard_listener():
     with keyboard.Listener(on_press=on_press) as listener:
         listener.join()
 
+def ask_for_clicks():
+    global num_clicks
+    while True:
+        try:
+            user_input = input("Enter the number of clicks you want: ")
+            num_clicks = int(user_input)
+            break  # Exit loop if conversion was successful.
+        except ValueError:
+            print("Invalid input. Please enter an integer value.")
+
 # ----------------------------
 # Main Function
 # ----------------------------
 def main():
     global coordinate, stop_program
+
+    ask_for_clicks()
 
     # Capture the coordinate using a mouse click.
     print("Please click anywhere on your screen to set the click coordinate.")
